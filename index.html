@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDs Cards</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="mini-container">
+            <div class="input-field">
+                <form>
+                    <h3>Please fill in the form</h3>
+                    <label class="lName">Last Name</label>
+                    <input type="text" id="inLastName" name="inLastName" placeholder="De la Cruz"  oninput="drawID()" myInput>
+                    <label class="fName">First Name</label>
+                    <input type="text" id="inFirstName" name="inFirstName" placeholder="Juan"  oninput="drawID()" myInput>
+                    <label class="mName">Middle Name</label>
+                    <input type="text" id="inMiddleName" name="inMiddleName" placeholder="M."  oninput="drawID()" myInput>
+                    <label class="course">Course</label>
+                    <input type="text" id="inCourse" name="inCourse" placeholder="BS in ..." oninput="drawID()" myInput>
+                    <label class="IDno">Student ID No.</label>
+    
+                    <div class="idNoDiv">
+                        <button type="button" id="idNoBtn">Get Number</button>
+                        <span id="idNoGenerate">00000000</span>
+                    </div>
+    
+                    <span class="labelPic">Choose one that describes you perfectly</span>
+                    <label for="file" class="upload">Upload an image</label>
+                    <input class="filepic" type="file" id="file" onchange="drawID()">
+                    
+                    <div class="btnDiv">
+                        <button type="button" id="download" >Download ID</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-field">
+                <div class="selectDiv">
+                    <h4 class="selectUni">Select university</h4>
+                    <select id="canvasSelector" onchange="showHideCanvas()">
+                        <option value="UPcard">UP</option>
+                        <option value="PUPcard">PUP</option>
+                        <option value="ATENEOcard">ATENEO</option>
+                        <option value="USTcard">UST</option>
+                        <option value="DLSUcard">DLSU</option>
+                    </select>
+                </div>
+                <div class="canvas-card">
+                    <canvas id="UPcard" width="310" height="390">
+                    </canvas>
+    
+                    <canvas id="PUPcard" width="310" height="390">
+                    </canvas>
+    
+                    <canvas id="ATENEOcard" width="310" height="390">
+                    </canvas>
+    
+                    <canvas id="USTcard" width="310" height="390">
+                    </canvas>
+                    
+                    <canvas id="DLSUcard" width="310" height="390">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./script.js"></script>
+</html>

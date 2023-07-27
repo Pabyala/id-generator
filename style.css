@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#PUPcard{
+    display: none;
+}
+#ATENEOcard{
+    display: none;
+}
+#UPcard{
+    display: none;
+}
+#DLSUcard{
+    display: none;
+}
+#USTcard{
+    display: none;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 1rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='1080' preserveAspectRatio='none' viewBox='0 0 1440 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1027%26quot%3b)' fill='none'%3e%3crect width='1440' height='1080' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M0%2c452.766C86.483%2c471.879%2c183.538%2c448.854%2c253.833%2c394.972C322.45%2c342.376%2c356.007%2c254.333%2c370.151%2c169.042C382.414%2c95.095%2c333.098%2c27.684%2c327.132%2c-47.035C320.576%2c-129.14%2c379.566%2c-220.714%2c333.574%2c-289.043C288.145%2c-356.536%2c187.192%2c-348.745%2c108.978%2c-371.145C31.354%2c-393.376%2c-43.974%2c-435.015%2c-123.29%2c-419.889C-205.782%2c-404.157%2c-285.414%2c-357.429%2c-331.401%2c-287.16C-375.57%2c-219.669%2c-360.098%2c-132.886%2c-363.848%2c-52.313C-367.225%2c20.245%2c-384.535%2c95.799%2c-352.255%2c160.869C-320.339%2c225.206%2c-245.995%2c250.904%2c-190.696%2c296.728C-126.147%2c350.217%2c-81.856%2c434.675%2c0%2c452.766' fill='%230a1f34'%3e%3c/path%3e%3cpath d='M1440 1691.935C1555.56 1713.374 1674.653 1662.467 1772.07 1596.712 1868.2440000000001 1531.796 1939.08 1435.243 1980.7350000000001 1326.945 2020.847 1222.658 2015.275 1110.143 2001.888 999.213 1988.229 886.03 1973.359 768.5450000000001 1902.562 679.188 1830.336 588.027 1723.569 524.966 1609.238 503.62699999999995 1500.101 483.25699999999995 1393.568 528.253 1288.6680000000001 564.61 1188.5149999999999 599.322 1081.565 629.171 1013.2239999999999 710.196 945.2529999999999 790.781 914.598 899.466 917.34 1004.853 919.867 1101.994 981.4100000000001 1182.855 1027.7440000000001 1268.271 1070.805 1347.653 1115.6979999999999 1421.899 1178.679 1486.623 1257.53 1567.656 1328.831 1671.31 1440 1691.935' fill='%2312355a'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1027'%3e%3crect width='1440' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container .mini-container{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    width: 1000px;
+    box-shadow: 0px 10px 15px 11px rgba(0,0,0,0.1);
+}
+
+.container .mini-container .input-field{
+    width: 50%;
+    background-color: #fff;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container .mini-container .input-field form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+.mini-container .input-field form h3{
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+}
+.mini-container .input-field .idNoDiv{
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+#idNoBtn{
+    font-size: 16px;
+    border-radius: 3px;
+    border: none;
+    padding: 5px;
+    margin-right: 5px;
+    height: 30px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    background-color: #cccccca6;
+    color: #000000;
+    transition: .3s;
+}   
+#idNoBtn:hover{
+    background-color: #f3f3f3;
+}
+.input-field .idNoDiv #idNoGenerate{
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 2px 3px;
+    font-size: 16px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    width: 95px;
+    border: 1px solid #dddfe2;
+}
+.fName, .mName, .course, .IDno{
+    margin-top: 5px;
+    font-size: 16px;
+}
+.lName{
+    font-size: 16px;
+}
+#inLastName, #inFirstName, #inMiddleName, #inCourse, #inIDno{
+    padding: 8px 5px;
+    font-size: 15px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    height: 30px;
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+}
+#inLastName, #inFirstName, #inMiddleName{
+    text-transform: uppercase;
+}
+.container .mini-container .input-field .picDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+}
+.upload{
+    text-align: center;
+    height: 30px;
+    width: 150px;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    background-color: #cccccca6;
+    color: #000000;
+    transition: .3s;
+}
+.upload:hover{
+    background-color: #f3f3f3;
+}
+.labelPic{
+    font-size: 14px;
+    margin-top: 10px;
+}
+#file{
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+.container .mini-container .card-field{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 520px;
+    background-color: #4651E5;
+}
+.container .mini-container .card-field .selectDiv{
+    display: block;
+    text-align: center;
+}
+h4{
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffff;
+}
+.mini-container .card-field .selectDiv select{
+    width: 110px;
+    height: 38px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #000000;
+    font-weight: bolder;
+    color: #ffff;
+    cursor: pointer;
+}
+.container .mini-container .card-field .canvas-card{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+canvas{
+    border: 1px solid black;
+}
+.btnDiv{
+    margin-top: 20px;
+    text-align: center;
+}
+
+#download{
+    padding: 8px 5px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    width: 130px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    background-color: #cccccca6;
+    color: #000000;
+    transition: .3s;
+}
+#download:hover{
+    background-color: #f3f3f3;
+}
+
+
+@media screen and (max-width: 787px){
+    .container {
+        height: auto;
+        padding: .4rem 2rem;
+    }
+    .container .mini-container {
+        flex-direction: column;
+        width: 1000px;
+    }
+    .container .mini-container .input-field {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .container .mini-container .card-field {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .container .mini-container .input-field form {
+        padding: 15px;
+    }
+    .mini-container .input-field form h3 {
+        font-size: 23px;
+    }
+    .lName {
+        font-size: 16px;
+    }
+    .fName, .mName, .course, .IDno {
+        font-size: 15px;
+    }
+    #idNoBtn {
+        font-size: 15px;
+        padding: 4px;
+    }
+    .input-field .idNoDiv #idNoGenerate {
+        font-size: 15px;
+    }
+    .upload {
+        font-size: 15px;
+    }
+    #download {
+        padding: 6px 4px;
+        font-size: 15px;
+        width: 130px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .container {
+        height: auto;
+        padding: .4rem .7rem;
+    }
+    .container .mini-container {
+        flex-direction: column;
+    }
+    .container .mini-container .input-field {
+        width: 100%;
+        height: auto;
+    }
+    .container .mini-container .input-field form {
+        padding: 15px 5px;
+    }
+    .mini-container .input-field form h3 {
+        font-size: 20px;
+    }
+    .lName {
+        font-size: 14px;
+    }
+    .fName, .mName, .course, .IDno {
+        margin-top: 3px;
+        font-size: 14px;
+    }
+    #inLastName, #inFirstName, #inMiddleName, #inCourse, #inIDno {
+        font-size: 14px;
+        border-radius: 3px;
+        outline: none;
+        height: 30px;
+        border: 1px solid #dddfe2;
+        color: #1d2129;
+    }
+    #idNoBtn {
+        font-size: 14px;
+        padding: 3px;
+    }
+    .input-field .idNoDiv #idNoGenerate {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .labelPic {
+        margin-top: 5px;
+    }
+    .upload {
+        font-size: 14px;
+        width: 135px;
+    }
+    .btnDiv {
+        margin-top: 15px;
+    }
+    #download {
+        padding: 5px 3px;
+        font-size: 15px;
+        width: 120px;
+    }
+
+
+    .container .mini-container .card-field {
+        width: 100%;;
+    }
+}
